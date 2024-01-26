@@ -1,0 +1,68 @@
+@value colors: "../../assets/css/colors.css";
+@value grey, darkgrey, lightgrey, darkgrey, brightblue, brightred from colors;
+
+.top {
+	font-size: 16px;
+	line-height: 16px;
+	margin-bottom: 11px;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.count {
+	color: grey;
+	display: flex;
+	gap: 4px;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.engagedCount {
+	color: darkgrey;
+}
+
+.percentageLine {
+	position: relative;
+	height: 8px;
+	margin-bottom: 8px;
+}
+
+.percentageBackground, .percentageColor {
+	height: 100%;
+	border-radius: 4px;
+	position: absolute;
+	height: 8px;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.percentageBackground {
+	background-color: lightgrey;
+}
+
+.percentageColor {
+	background-color: darkgrey;
+}
+
+.percentageLine.blue .percentageColor {
+	background-color: brightblue;
+}
+
+.percentageLine.red .percentageColor {
+	background-color: brightred;
+}
+
+
+.text {
+	font-size: 14px;
+	line-height: 20px;
+	color: grey;
+
+	a {
+		display: inline-block;
+		border-bottom: 1px solid grey;
+	}
+}

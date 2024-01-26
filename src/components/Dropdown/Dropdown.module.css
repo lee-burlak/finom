@@ -1,0 +1,44 @@
+@value colors: "../../assets/css/colors.css";
+@value greybackground, shadow, shadowsecondary from colors;
+
+@keyframes block-animation {
+  0% {
+		opacity: 0;
+	}
+  100% {
+		opacity: 1;
+	}
+}
+
+.dropdownBox {
+	position: relative;
+	text-wrap: nowrap;
+	cursor: pointer;
+}
+
+.dropdownValue {
+	font-size: 18px;
+	line-height: 18px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.dropdown {
+	position: absolute;
+	background-color: greybackground;
+	border-radius: 0 0 8px 8px;
+	padding: 8px;
+	left: -8px;
+	right: 0;
+	box-shadow: 0px 8px 12px 0px shadow, 0px 1px 3px 0px shadowsecondary;
+	animation: block-animation 0.5s ease-in-out forwards;
+}
+
+.dropdownOption {
+	margin-bottom: 8px;
+}
+
+.hide {
+	transform: rotate(180deg);
+}

@@ -1,0 +1,16 @@
+@value colors: "../../assets/css/colors.css";
+@value brightred, lightred from colors;
+
+.avatar {
+	background-color: lightred;
+	border-radius: 12px;
+	height: 32px;
+	width: 32px;
+	color: brightred;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 16px;
+	text-align: center;
+	padding-top: 8px;
+	box-sizing: border-box;
+}

@@ -1,0 +1,33 @@
+@value colors: "../../assets/css/colors.css";
+@value brightred, brightblue, lightred, bluegrey, white from colors;
+
+.button {
+	font-size: 14px;
+	line-height: 16px;
+	padding: 8px 16px 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+	text-wrap: nowrap;
+
+	&.grey {
+		background-color: bluegrey;
+		color: brightblue;
+	}
+
+	&.blue {
+		background: brightblue;
+		color: white;
+	}
+	
+	&.red {
+		background: brightred;
+		color: white;
+	}
+
+	&.plain {
+		color: brightblue;
+		font-weight: 400;
+		padding: 0;
+	}
+}

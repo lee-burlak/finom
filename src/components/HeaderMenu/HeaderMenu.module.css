@@ -1,0 +1,73 @@
+@value breakpoints: "../../assets/css/breakpoints.css";
+@value bp-xl, bp-lg from breakpoints;
+@value colors: "../../assets/css/colors.css";
+@value greybackground, shadow, shadowsecondary from colors;
+
+@keyframes block-animation {
+  0% {
+		opacity: 0;
+	}
+  100% {
+		opacity: 1;
+	}
+}
+
+.menu {
+  display: flex;
+	gap: 40px;
+	align-items: center;
+	font-size: 18px;
+	line-height: 18px;
+	text-wrap: nowrap;
+}
+
+.invite {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.burgerMenu {
+	display: none;
+
+	img {
+		width: 24px;
+	}
+}
+
+.burgerItems {
+	position: relative;
+	top: 4px;
+
+	ul {
+		position: absolute;
+		background-color: greybackground;
+		border-radius: 8px;
+		padding: 16px;
+		left: -16px;
+		width: 200px;
+		box-shadow: 0px 8px 12px 0px shadow, 0px 1px 3px 0px shadowsecondary;
+		animation: block-animation 0.5s ease-in-out forwards;
+	}
+
+	li {
+		padding: 4px 0;
+	}
+}
+
+@media bp-xl {
+	.menu {
+		gap: 20px;
+	}
+}
+
+@media bp-lg {
+	.menu {
+		display: none;
+	}
+
+	.burgerMenu {
+		display: flex;
+		margin-top: 6px;
+	}
+}

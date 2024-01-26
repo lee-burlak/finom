@@ -1,0 +1,72 @@
+@value breakpoints: "../../assets/css/breakpoints.css";
+@value bp-xl, bp-lg, bp-sm from breakpoints;
+
+.header {
+	padding: 30px 32px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	width: 15%;
+	margin-top: 2px;
+}
+
+.center {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	max-width: 1120px;
+	width: 70%;
+	padding-right: 32px;
+	box-sizing: border-box;
+	align-items: center;
+	flex: 1;
+}
+
+.selection {
+	width: 15%;
+}
+
+.button.button {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding-left: 12px;
+}
+
+@media bp-xl {
+	.header {
+		gap: 20px;
+	}
+
+	.logo, .selection, .center {
+		width: auto;
+	}
+	
+	.center {
+		padding-right: 0;
+	}
+}
+
+@media bp-lg {
+	.header {
+		padding: 16px;
+		align-items: flex-start;
+	}
+
+	.center {
+		align-items: flex-start;
+	}
+
+	.logo {
+		margin-top: 9px;
+	}
+}
+
+@media bp-sm {
+	.button.button {
+		display: none;
+	}
+}

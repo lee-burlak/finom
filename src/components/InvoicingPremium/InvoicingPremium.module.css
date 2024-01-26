@@ -1,0 +1,91 @@
+@value colors: "../../assets/css/colors.css";
+@value lightbluegrey, brightblue, grey from colors;
+@value breakpoints: "../../assets/css/breakpoints.css";
+@value bp-sm from breakpoints;
+
+@keyframes block-animation {
+  0% {
+		transform: rotateX(0deg);
+		opasity: 1
+	}
+  100% {
+		transform: rotateX(-10deg);
+		opacity: 0;
+		display: none;
+	}
+}
+
+.invoicing {
+	perspective: 10em;
+}
+
+.animatedBlock {
+	background: lightbluegrey;
+	border-radius: 12px;
+	padding: 24px 40px 20px;
+	display: flex;
+	gap: 32px;
+	justify-content: space-between;
+	position: relative;
+	margin: 0 auto;
+}
+
+.hide {
+  animation: block-animation 0.5s ease-in-out forwards;
+}
+
+.closeButton {
+	position: absolute;
+	right: 37.5px;
+	top: 23px;
+}
+
+.header {
+	font-family: Montserrat;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 29px;
+	color: brightblue;
+	margin-bottom: 16px;
+}
+
+.advantage {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-bottom: 4px;
+}
+
+.priceBox {
+	text-align: right;
+}
+
+.price {
+	margin: 27px 0 8px;
+	font-family: Montserrat;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 29px;
+}
+
+.clarification {
+	font-size: 12px;
+	line-height: 16px;
+	max-width: 160px;
+	color: grey;
+	margin-bottom: 25px;
+}
+
+@media bp-sm {
+	.invoicing {
+		display: block;
+	}
+
+	.priceBox {
+		text-align: left;
+	}
+
+	.clarification {
+		max-width: 100%;
+	}
+}

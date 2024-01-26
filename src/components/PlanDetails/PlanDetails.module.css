@@ -1,0 +1,71 @@
+@value colors: "../../assets/css/colors.css";
+@value shadow, shadowsecondary, grey, black, brightred from colors;
+@value breakpoints: "../../assets/css/breakpoints.css";
+@value bp-lg, bp-sm from breakpoints;
+
+.tabsSwitcher {
+	margin-bottom: 40px;
+	display: flex;
+	gap: 44px;
+	color: grey;
+	font-size: 18px;
+	line-height: 18px;
+
+	div {
+		padding-bottom: 16px;
+		position: relative;
+
+		&:hover, &.active {
+			font-weight: 700;
+			color: black;
+
+			&::after {
+				content: '';
+				border: 2px solid brightred;
+				display: block;
+				border-radius: 4px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.active {
+			cursor: default;
+		}
+	}
+}
+
+.detailsBox {
+	display: flex;
+	gap: 40px;
+}
+
+.detailsColumn {
+	width: calc(50% - 20px);
+}
+
+.limit {
+	margin-bottom: 40px;
+}
+
+@media bp-lg {
+	.detailsContainer {
+		margin-bottom: 16px;
+	}
+}
+
+@media bp-sm {
+	.detailsBox {
+		display: block;
+	}
+
+	.detailsColumn {
+		width: auto;
+	}
+}

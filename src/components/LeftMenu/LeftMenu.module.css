@@ -1,0 +1,73 @@
+@value colors: "../../assets/css/colors.css";
+@value white, shadow, shadowsecondary, grey, brightred from colors;
+@value breakpoints: "../../assets/css/breakpoints.css";
+@value bp-md, bp-sm from breakpoints;
+
+.menu {
+	background-color: white;
+	box-shadow: 0px 8px 12px 0px shadow, 0px 1px 3px 0px shadowsecondary;
+	border-radius: 16px;
+	padding: 32px 32px 4px 0;
+}
+
+.header {
+	font-family: Montserrat;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 14px;
+	letter-spacing: 1px;
+	color: grey;
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	padding-left: 32px;
+}
+
+.list {
+	margin-bottom: 28px;
+}
+
+.item {
+	padding: 12px 0 12px 28px;
+	border-left: 4px solid transparent;
+	line-height: 16px;
+	font-size: 16px;
+	display: block;
+
+	&:hover {
+		border-color: brightred;
+		cursor: pointer;
+		font-family: Lato;
+		font-weight: 700;
+	}
+
+	&.active {
+		border-color: brightred;
+		cursor: default;
+	}
+}
+
+@media bp-md {
+	.menu {
+		display: flex;
+	}
+
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-bottom: 16px;
+	}
+
+	.item {
+		border-left: none;
+		border-bottom: 2px solid transparent;
+		margin: 8px 0 8px 32px;
+		padding: 0;
+	}
+}
+
+@media bp-sm {
+	.list {
+		gap: 0;
+	}
+}

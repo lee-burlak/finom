@@ -1,0 +1,13 @@
+@value colors: "../../assets/css/colors.css";
+@value brightred from colors;
+
+.chat {
+	background-color: brightred;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	border-radius: 100%;
+	padding-top: 11.25px;
+	box-sizing: border-box;
+	cursor: pointer;
+}

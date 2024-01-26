@@ -1,0 +1,57 @@
+@value breakpoints: "./assets/css/breakpoints.css";
+@value bp-lg, bp-md from breakpoints;
+
+.content {
+	display: flex;
+	gap: 32px;
+	align-items: flex-start;
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 0 32px;
+}
+
+.menu {
+	width: calc(29.5% - 16px);
+}
+
+.contentBox {
+	width: calc(70.5% - 16px);
+}
+
+.chat {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+}
+
+
+
+@media bp-lg {
+	.content {
+		padding: 16px;
+		gap: 16px;
+	}
+
+	.menu {
+		width: calc(20% - 8px);
+	}
+
+	.contentBox {
+		width: calc(80% - 8px);
+	}
+}
+
+@media bp-md {
+	.content {
+		display: block;
+	}
+
+	.menu {
+		width: auto;
+		margin-bottom: 16px;
+	}
+
+	.contentBox {
+		width: auto;
+	}
+}

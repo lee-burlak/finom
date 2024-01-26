@@ -1,0 +1,4 @@
+@value bp-xl: (max-width: 1280px);
+@value bp-lg: (max-width: 1024px);
+@value bp-md: (max-width: 768px);
+@value bp-sm: (max-width: 568px);
